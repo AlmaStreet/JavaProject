@@ -1,16 +1,10 @@
 package org.example;
-import static spark.Spark.*;
+import org.springframework.core.SpringVersion;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-//        get("/", (req, res) -> "Hello, world!");
-        // Start server on port 4567
-        port(4567);
-
-        // Define routes
-        get("/", (req, res) -> "Hello, world!");
-        get("/hello/:name", (req, res) -> "Hello, " + req.params("name"));
-//        awaitInitialization();
     }
 }
